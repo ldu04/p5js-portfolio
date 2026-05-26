@@ -70,18 +70,11 @@ header p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important;
-  height: 100% !important;
+  width: 600px !important;
+  height: 400px !important;
   border: none;
-  display: block;
-  overflow: hidden !important;
-}
-
-.cell iframe html, 
-.cell iframe body {
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
+  transform-origin: top left;
+  transform: scale(0.72);
 }
 
 .info {
@@ -108,8 +101,29 @@ footer {
   color: #64748b;
 }
 
+@media (max-width: 900px) {
+  .cell iframe {
+    transform: scale(0.68);
+  }
+}
+
+@media (max-width: 768px) {
+  .cell iframe {
+    transform: scale(0.55);
+  }
+}
+
 @media (max-width: 640px) {
   #projects {
     grid-template-columns: 1fr;
+  }
+  .cell iframe {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .cell iframe {
+    transform: scale(0.7);
   }
 }
